@@ -15,7 +15,7 @@ def pressedCallback(dummy):
 
 def getmp3FileNames():
     ret = []
-    os.chdir('../MP3Collection/')
+    os.chdir('/home/pi/Music/MP3Collection/')
     for file in glob.glob("*.mp3"):
         ret.append(file)
     return ret
