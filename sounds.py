@@ -15,7 +15,7 @@ def pressedCallback(dummy):
 
 def getmp3FileNames():
     ret = []
-    os.chdir('.')
+    os.chdir('../MP3Collection/')
     for file in glob.glob("*.mp3"):
         ret.append(file)
     return ret
@@ -75,7 +75,9 @@ if __name__ == '__main__':
             # time.sleep(clipLength)
             while time.time() - audioStartTimeIndi < clipLength:
                 time.sleep(0.1)
-                if pressed == True:
-                    audioStartTime = time.time()
-                    pressed = False
+
+            if pressed == True:
+                audioStartTime = time.time()
+                pressed = False
+
 
